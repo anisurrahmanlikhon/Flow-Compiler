@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowchart Compiler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <center><h1 style ="display: inline-block; background-color: orange; border-radius:5px;">Flowchart Compiler</h1><br></center>
+   <h2 style ="display: inline-block; background-color: lightgreen; border-radius:5px;">Create a Flowchart and Run</h2>
+   <br>
+  <div class="toolbar">
+    <button onclick="flow.addBox('statement')" id="statementButton">+</button>
+    <button onclick="flow.addBox('conditional')" id="conditionalButton">+</button>
+    <button onclick="flow.addBox('input')" id="inputButton">+</button>
+    <button onclick="flow.addBox('output')" id="outputButton">+</button>
+    <button onclick="flow.run()">Run</button>
+    <button onclick="flow.stop()" id="stopButton">Stop</button>
+    <h3>Variable</h3>
+    <table>
+      <tbody id="scope"></tbody>
+    </table>
+    <h3>Compiler</h3>
+    <div id="console"></div>
+    </div>
+	<br>
+  <div id="canvas">
+    <div id="boxes"></div>
+    <div id="arrows"></div>
+  </div>
+  <script src="parser.js"></script>
+  <script src="flow.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
